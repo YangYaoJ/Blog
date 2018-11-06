@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>个人博客</title>
+		<link rel="stylesheet" href="../public/css/bootstrap.css">
+		<link rel="stylesheet" href="../public/css/style.css">
+	</head>
+	<body>
+		<div class="menu">
+			<img src="../public/images/menu.png" alt="" width="18px">
+			<ul class="list-unstyled">
+				<li class="login-li"><a href="" class="log">登录</a></li>
+			</ul>
+		</div>
+		<h2 class="text-center title">我的博客</h2>
+		<p class="text-center">请注册</p>
+		<form class="myinfo">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">用户名<sup>*</sup></label>
+		    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="user" name="username">
+			  <span class="user-tip"></span>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">密码<sup>*</sup></label>
+		    <input type="password" class="form-control pass" id="exampleInputPassword1" placeholder="Password" name="pass">
+			  <span class="pass-tip"></span>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">确认密码<sup>*</sup></label>
+		    <input type="password" class="form-control con-pass" id="exampleInputPassword2" placeholder="Password" >
+			  <span class="con-pass-tip"></span>
+		  </div>
+		  <div class="form-group">
+		    <label for="personal">个性签名<sup>*</sup></label>
+		    <textarea name=""  cols="30" rows="10" class="form-control aboutMe" id="personal"></textarea>
+			  <span class="aboutMe-tip"></span>
+		  </div>
+		  <button type="submit" class="btn btn-primary register" value="注册" style="width:100%">注册</button>
+		</form>
+
+
+
+		<script src="../public/js/jquery.js"></script>
+		<script src="../public/js/bootstrap.min.js"></script>
+		<script src="../public/js/register.js"></script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>个人博客</title>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+	<link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+<div class="menu">
+	<img src="../public/images/menu.png" alt="" width="18px">
+	<ul class="list-unstyled">
+		<li class="re-log">退出</li>
+	</ul>
+</div>
+<h2 class="text-center title">欢迎<span class="author"><%= user %></span>登陆博客</h2>
+<form class="myinfo">
+	<div class="form-group">
+		<label for="exampleInputEmail1">标题<sup>*</sup></label><span class="title-tip"></span>
+		<input type="text" class="form-control my-title" id="exampleInputEmail1" placeholder="请输入标题">
+	</div>
+	<div class="form-group">
+		<label for="personal">内容<sup>*</sup></label><span class="content-tip"></span>
+		<textarea name=""  cols="30" rows="10" class="form-control my-content" id="personal"></textarea>
+	</div>
+	<button type="submit" class="btn btn-primary yj-submit">发布</button>
+</form>
+<div class="yj-list">
+	<ul class="list-unstyled yj-ul">
+		<% for(var i=0;i<list.length;i++){ %>
+		<li class="my-li">
+			<span class="data-id"><%= list[i]._id %></span>
+			<span class="blog-author"><%= list[i].author %>:</span>
+			<span class="blog-title"><%= list[i].title %></span>
+			<p class="blog-content"><%= list[i].content %></p>
+			<div class="clearfix">
+				<div class="time"><%= list[i].time %></div>
+				<div class="review">
+					<span class="glyphicon glyphicon-comment my-review"></span>
+					<span class="review-num"><%= list[i].review %></span>
+				</div>
+				<div class="zan">
+					<p class="yj-hidden"><%= list[i].color %></p>
+					<span class="glyphicon glyphicon-thumbs-up my-zan "></span>
+					<span class="zan-number"><%= list[i].zan %></span>
+				</div>
+			</div>
+			<div class="add">
+				<div class="rev">
+					<input type="text" placeholder="请输入评论" class="input-rev" onblur="yjblur(this)">
+					<button class=" btn btn-primary sub " onclick="subm(this)">发布</button>
+				</div>
+				<ul class="list-unstyled addUl" >
+					<% for(var j=0;j<list[i].aboutRev.length;j++) { %>
+					<li>
+						<span class="review-person"><%= list[i].aboutRev[j].reviewPer %>:</span>
+						<span class="review-con"><%= list[i].aboutRev[j].reviewCon  %></span>
+						<span class="review-time"><%= list[i].aboutRev[j].reviewTime %></span>
+					</li>
+					<% } %>
+
+				</ul>
+			</div>
+		</li>
+		<% } %>
+	</ul>
+
+</div>
+
+
+<div class="load"><span class="load-data">加载中...</span></div>
+<div class="scroll">
+	<span class="scrolltop">回到顶部</span>
+</div>
+
+
+
+
+<script src="../public/js/jquery.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="../public/js/create.js"></script>
+</body>
+</html>

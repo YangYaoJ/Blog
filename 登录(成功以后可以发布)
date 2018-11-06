@@ -1,0 +1,38 @@
+登录(成功以后可以发布)
+注册
+文章发布
+留言功能
+分页功能
+
+
+//加载更多事件
+$('.load-data').click(function () {
+    console.log($('.my-li').length);
+    $.ajax({
+        url:'http://localhost:8989/loadMore',
+        type:'post',
+        dataType:'json',
+        data:{length:$('.my-li').length},
+        success:function (res) {
+            if(res.ok){
+                for(var i=0;i<res.list.length;i++){
+                    if(res.list[i].praiseWho.indexOf($('.author').html()) !== -1){
+                        res.list[i].color='yyj';
+                    }
+                    else{
+                        res.list[i].color='false';
+                    }
+
+                    var tag=$(`<li class="my-li"><span class="data-id">${res.list[i]._id}</span><span class="blog-author">${res.list[i].author }:</span><span class="blog-title">${res.list[i].title}</span><p class="blog-content">${res.list[i].content}</p><div class="clearfix"><div class="time">${res.list[i].time}</div><div class="review"><span class="glyphicon glyphicon-comment my-review"></span><span class="review-num">${res.list[i].review}</span></div><div class="zan"><p class="yj-hidden">${res.list[i].color}</p><span class="glyphicon glyphicon-thumbs-up my-zan"></span> <span class="zan-number">${res.list[i].zan}</span></div></div><div class="add"><div class="rev"><input type="text" placeholder="请输入评论" class="input-rev" onblur="yjblur(this)"><button class="btn btn-primary sub" onclick="subm(this)">发布</button></div><ul class="list-unstyled addUl"></ul></div></li>`);
+
+                    $('.yj-ul').append(tag);
+                }
+                for(var j=0;j<res.list.length;j++){
+                    if($('.yj-hidden').eq(parseInt(res.length)+j).html()==='yyj'){
+                        $('.my-zan').eq(parseInt(res.length)+j).addClass('praise')
+                    }
+                }
+            }
+        }
+    })
+});

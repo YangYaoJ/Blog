@@ -1,0 +1,222 @@
+.myinfo{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+.title{
+	margin-top: 50px;
+}
+sup{
+	color: red;
+	font-weight: bold;
+}
+body{
+	font-size: 14px;
+}
+#personal{
+	resize: none;
+	height: 100px;
+}
+.menu{
+	position: fixed;
+	right: 40px;
+	top: 10px;
+	cursor: pointer;
+}
+.menu ul{
+	position: absolute;
+    width: 38px;
+    padding: 4px;
+    left: -8px;
+    top: 26px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.list{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.list .media-body{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.yj-list{
+	width: 60%;
+	margin: 10px auto;
+}
+.myinfo{
+	border-radius: 10px;
+}
+
+/*my-li*/
+.my-li{
+	border: 1px solid #ccc;
+	margin-bottom: 20px	;
+	border-radius: 10px;
+}
+
+/*点赞评论发表时间*/
+.time,.review,.zan{
+	float: right;
+	margin-left: 20px;
+}
+
+
+/*分页*/
+.page{
+	/*display: none;*/
+	width: 60%;
+	margin: 20px auto;
+}
+.page ul li{
+	float: left;
+	margin-right: 20px;
+}
+
+/*渲染博客样式*/
+.blog-author{
+	font-size: 22px;
+	font-weight: bolder;
+
+}
+.blog-title{
+	font-size: 20px;
+}
+.blog-content{
+	font-size: 18px;
+	margin: 10px 0 ;
+}
+
+/*评论图标样式*/
+.my-review{
+	color: yellow;
+	cursor:pointer;
+	font-size: 20px;
+}
+/*点赞图标样式*/
+.my-zan{
+	color: #505050;
+	cursor: pointer;
+	font-size: 20px;
+}
+/*.my-zan:hover{*/
+	/*color: #ff5442;*/
+/*}*/
+.praise{
+	color: red;
+}
+/*评论时间样式*/
+.time{
+	font-size: 18px;
+}
+/*注册li的样式*/
+.regi-li{
+	text-align: center;
+}
+/*登录li的样式*/
+.login-li{
+	text-align: center;
+}/*退出li的样式*/
+.re-log{
+	text-align: center;
+}
+
+
+/*点赞隐藏的span*/
+.yj-hidden{
+    display: none;
+}
+
+/**/
+.data-id{
+	display: none;
+}
+
+
+/*发布评论样式*/
+.rev{
+	width: 90%;
+	margin: 0 auto;
+}
+.input-rev{
+	width: 90%;
+	height: 34px;
+}
+.sub{
+	/*margin-bottom: 5px;*/
+}
+
+.add{
+	display: none;
+}
+.addUl{
+	width: 90%;
+	margin: 0 auto;
+}
+/*评论内容*/
+/*.review-con{*/
+	/*float: left;*/
+/*}*/
+.review-person{
+	margin-right: 10px;
+}
+.review-time{
+	float: right;
+}
+
+/*点击加载更多*/
+.load-data{
+	display: block;
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	cursor: pointer;
+	text-align: center;
+}
+/*回到顶部*/
+.scroll{
+	position: fixed;
+	width: 30px;
+	height: 40px;
+	right: 10px;
+	bottom: 20px;
+	background: skyblue;
+	cursor: pointer;
+	display: none;
+}
+.scrolltop{
+	display: block;
+	width: 30px;
+	height: 40px;
+	word-break: break-word;
+}
+
+@media screen and (max-width: 640px){
+	.title{
+		font-size: 24px;
+	}
+	.myinfo {
+		width: 90%;
+	}
+
+	.yj-list{
+		width: 95%;
+	}
+	.blog-author{
+		font-size: 20px;
+	}
+	.blog-title{
+		font-size: 18px;
+	}
+	.blog-content,.time{
+		font-size: 16px;
+	}
+	.my-zan,.my-review{
+		font-size: 16px;
+	}
+
+}
