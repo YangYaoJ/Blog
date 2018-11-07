@@ -1,5 +1,5 @@
 # blog
-微博发布介绍（https://yangyaoj.github.io/blog/）
+微博发布介绍(https://yangyaoj.github.io/blog/)
 
 1.前端运用bootstrap框架配合媒体查询以及模板引擎完成。
 
