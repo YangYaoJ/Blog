@@ -75,7 +75,9 @@ $('.yj-submit').click(function (e) {
                         console.log('判断成功！');
                         console.log(res.id);
                         $('.data-id').eq(0).html(res.id);
-                        $('.yj-ul').children('.my-li:last-child').remove();
+                        if($('.my-li').length>7){
+                            $('.yj-ul').children('.my-li:last-child').remove();
+                        }
                     }
                 }
             });

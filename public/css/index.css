@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+div{
+    width: 60%;
+    margin: 0 auto;
+}
 
 h2{
     text-align: center;
@@ -9,18 +13,21 @@ h2{
 }
 
 p{
-    width: 60%;
     margin: 0 auto 20px;
+}
+
+img{
+    width: 100%;
 }
 
 
 @media screen and (max-width: 1200px){
-    p{
+    div{
         width: 75%;
     }
 }
 @media screen and (max-width: 640px){
-    p{
+    div{
         width: 90%;
     }
 }
